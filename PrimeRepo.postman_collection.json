@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PrimeRepo",
+		"_postman_id": "35ceb00b-e7af-a9dd-5df1-02cd3347289d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetWorkerDetails",
+			"request": {
+				"url": "localhost:8084/repository/primeworker",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AddWorkerDetails",
+			"request": {
+				"url": "localhost:8084/repository/primeworker",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startIndex\": 1001,\n\t\"endIndex\": 2000,\n\t\"workerID\": 2,\n\t\"status\": \"InProgress\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PostPrimeNumbers",
+			"request": {
+				"url": "localhost:8084/repository/primenumber/addnumbers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"primeNumbers\": [10,20,30]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CheckNumberExist",
+			"request": {
+				"url": {
+					"raw": "localhost:8084/repository/primenumber/exist?n=50",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"repository",
+						"primenumber",
+						"exist"
+					],
+					"query": [
+						{
+							"key": "n",
+							"value": "50",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateWorkerDetails",
+			"request": {
+				"url": "localhost:8084/repository/primeworker",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"startIndex\": 1001,\n\t\"endIndex\": 2000,\n\t\"workerID\": 2,\n\t\"status\": \"COMPLETED\"\n}\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

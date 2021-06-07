@@ -1,0 +1,41 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PrimeManager",
+		"_postman_id": "54889c6d-2de5-79f2-08c2-ac445e51a6ba",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetRange",
+			"request": {
+				"url": {
+					"raw": "localhost:8085/primemanager/getrange?workerID=",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"primemanager",
+						"getrange"
+					],
+					"query": [
+						{
+							"key": "workerID",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
